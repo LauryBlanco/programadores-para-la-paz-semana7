@@ -1,0 +1,13 @@
+Ejemplos de reportes comunitarios estructurados en formato JSON:
+
+Ejemplo 1 (Infraestructura):
+{
+  "tipo": "Infraestructura",
+  "descripcion": "Fuga de agua potable en la intersección de la calle 5 con carrera 12"
+}
+
+Ejemplo 2 (Seguridad/Ambiente):
+{
+  "tipo": "Ambiente",
+  "descripcion": "Presencia de escombros que obstruyen el paso peatonal en el parque central"
+}

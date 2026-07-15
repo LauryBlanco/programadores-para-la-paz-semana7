@@ -1,0 +1,29 @@
+Resultados y análisis de las pruebas de la API (/reportes):
+
+¿Qué sucede cuando consultamos los reportes?
+Al realizar una petición GET a la ruta 'http://localhost:3000/reportes' por primera vez, 
+el servidor responde con un array vacío representado por corchetes '[]'. Esto sucede 
+porque los datos se almacenan temporalmente en el array en memoria 'reportes', el cual 
+inicia vacío.
+
+Una vez que enviamos una petición POST con un formato JSON adecuado y volvemos a consultar 
+la ruta GET, la respuesta del servidor cambia. Ahora devuelve un arreglo de objetos JSON que 
+contiene los reportes almacenados durante el tiempo de ejecución. 
+
+Ejemplo de respuesta exitosa obtenida en el navegador tras agregar reportes:
+[
+  {
+    "id": 1,
+    "tipo": "Infraestructura",
+    "descripcion": "Daño en alumbrado público"
+  },
+  {
+    "id": 2,
+    "tipo": "Ambiente",
+    "descripcion": "Acumulación de residuos en una zona comunitaria"
+  }
+]
+
+Nota: Si el servidor se apaga o se reinicia, la memoria RAM se limpia y el array vuelve a 
+estar vacío, por lo que las peticiones GET volverán a responder con '[]' hasta que hagamos 
+nuevas peticiones POST.
